@@ -26,7 +26,7 @@ int main(void) {
 	int contadorId = 1000;
 	int contadorId2 = 100;
 	int flagOpcion1 = 0;
-	int flagOpcion4 = 0;
+	int flagOpcion4=0;
 	int idContribuyente;
 	int idRecaudacion;
 
@@ -90,8 +90,7 @@ int main(void) {
 					scanf("%d", &idContribuyente);
 				}
 				bajaRecaudacion(listaRecaudaciones, TAM_ARRAY, idContribuyente);
-				bajaContribuyente(listaContribuyentes, TAM_ARRAY,
-						idContribuyente);
+				bajaContribuyente(listaContribuyentes, TAM_ARRAY, idContribuyente);
 			} else {
 				printf(
 						"No ha dado de alta contribuyentes, ingrese a la opción 1");
@@ -101,13 +100,11 @@ int main(void) {
 		case 4:
 			if (flagOpcion1 == 1) {
 
-				if (buscarLibre2(listaRecaudaciones, &posicion2, TAM_ARRAY)
-						!= -1) {
+				if (buscarLibre2(listaRecaudaciones, &posicion2, TAM_ARRAY)!= -1) {
 
-					altaRecaudacion(listaRecaudaciones, posicion2,
-							&contadorId2);
+					altaRecaudacion(listaRecaudaciones, posicion2, &contadorId2);
 					contadorId2++;
-					flagOpcion4 = 1;
+					flagOpcion4=1;
 				}
 
 				else {
@@ -121,71 +118,75 @@ int main(void) {
 						"No ha dado de alta contribuyentes, ingrese a la opción 1");
 			}
 
+
 			break;
 
 		case 5:
 			if (flagOpcion4 == 1) {
 				mostrarPorIdRecaudacion(listaRecaudaciones, TAM_ARRAY);
-				printf(
-						"Si esta seguro de refinanciar la recaudacion reingrese el id: ");
-				scanf("%d", &idRecaudacion);
+				printf("Si esta seguro de refinanciar la recaudacion reingrese el id: ");
+								scanf("%d", &idRecaudacion);
 
-				while (idRecaudacion < 100 || idRecaudacion > 150) {
-					printf(
-							"Error. Ingrese un Id de recaudacion entre (100-150): ");
-					scanf("%d", &idRecaudacion);
-				}
-				cambiarEstadoRefinanciar(listaRecaudaciones, TAM_ARRAY,
-						idRecaudacion);
-				printf("La recaudacion fue refinanciada");
+								while (idRecaudacion < 100 || idRecaudacion > 150) {
+									printf(
+											"Error. Ingrese un Id de recaudacion entre (100-150): ");
+									scanf("%d", &idRecaudacion);
+								}
+								cambiarEstadoRefinanciar(listaRecaudaciones, TAM_ARRAY, idRecaudacion);
+								printf("La recaudacion fue refinanciada");
 
-			} else {
-				printf(
-						"No ha dado de alta recaudaciones, ingrese a la opción 4");
+			}
+			else {
+					printf("No ha dado de alta recaudaciones, ingrese a la opción 4");
 			}
 			break;
+
 
 		case 6:
-			if (flagOpcion4 == 1) {
-				mostrarPorIdRecaudacion(listaRecaudaciones, TAM_ARRAY);
-				printf(
-						"Si esta seguro de saldar la recaudacion reingrese el id: ");
-				scanf("%d", &idRecaudacion);
+					if (flagOpcion4 == 1) {
+						mostrarPorIdRecaudacion(listaRecaudaciones, TAM_ARRAY);
+						printf("Si esta seguro de saldar la recaudacion reingrese el id: ");
+										scanf("%d", &idRecaudacion);
 
-				while (idRecaudacion < 100 || idRecaudacion > 150) {
-					printf(
-							"Error. Ingrese un Id de recaudacion entre (100-150): ");
-					scanf("%d", &idRecaudacion);
-				}
-				cambiarEstadoSaldar(listaRecaudaciones, TAM_ARRAY,
-						idRecaudacion);
-				printf("La recaudacion fue saldada");
-			} else {
-				printf(
-						"No ha dado de alta recaudaciones, ingrese a la opción 4");
-			}
-			break;
+										while (idRecaudacion < 100 || idRecaudacion > 150) {
+											printf(
+													"Error. Ingrese un Id de recaudacion entre (100-150): ");
+											scanf("%d", &idRecaudacion);
+										}
+										cambiarEstadoSaldar(listaRecaudaciones, TAM_ARRAY, idRecaudacion);
+										printf("La recaudacion fue saldada");
+					/*
+										for (int i = 0; i < TAM_ARRAY; i++) {
+										printf("Descripcion: %s\n", listaRecaudaciones[i].idEstado.descripcion);
+										printf("idEstado: %d\n", listaRecaudaciones[i].idEstado.idEstado);
+										printf("IsEmpty: %d\n", listaRecaudaciones[i].idEstado.isEmpty);
+									}
+					*/
+					}
+					else {
+							printf("No ha dado de alta recaudaciones, ingrese a la opción 4");
+					}
+					break;
 
 		case 7:
-			if (flagOpcion1 == 1) {
-				mostrarContribuyentes(listaContribuyentes, listaRecaudaciones,
-						TAM_ARRAY);
-			} else {
-				printf(
-						"No ha dado de alta contribuyentes, ingrese a la opción 1");
-			}
+					if (flagOpcion1 == 1) {
+						mostrarContribuyentes(listaContribuyentes, listaRecaudaciones, TAM_ARRAY);
+					} else {
+						printf(
+								"No ha dado de alta contribuyentes, ingrese a la opción 1");
+					}
 
-			break;
+					break;
 
 		case 9:
-			if (flagOpcion4 == 1) {
-				mostrarRecaudacionPorIdTipo(listaRecaudaciones, TAM_ARRAY);
-			} else {
-				printf(
-						"No ha dado de alta recaudaciones, ingrese a la opción 4");
-			}
+							if (flagOpcion4 == 1) {
+								mostrarRecaudacionPorIdTipo(listaRecaudaciones, TAM_ARRAY);
+							} else {
+								printf(
+										"No ha dado de alta recaudaciones, ingrese a la opción 4");
+							}
 
-			break;
+							break;
 
 		case 10:
 			printf("A salido del programa");
@@ -194,6 +195,7 @@ int main(void) {
 
 		}
 	} while (resp == 's');
+
 
 	return EXIT_SUCCESS;
 }

@@ -1,1 +1,7 @@
-Info: Nothing to build for Parcial_1_Prog
+19:54:39 **** Incremental Build of configuration Debug for project Parcial_1_Prog ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1_Prog.o" "..\\src\\Parcial_1_Prog.c" 
+gcc -o Parcial_1_Prog.exe "src\\Parcial_1_Prog.o" "src\\eContribuyente.o" "src\\eRecaudacion.o" 
+
+19:54:39 Build Finished. 0 errors, 0 warnings. (took 406ms)
+
