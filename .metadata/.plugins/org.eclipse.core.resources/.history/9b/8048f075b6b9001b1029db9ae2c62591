@@ -12,7 +12,7 @@
 #include <string.h>
 #include "eRecaudacion.h"
 #include "eContribuyente.h"
-#define TAM_ARRAY 50
+#define TAM_ARRAY 3
 
 int main(void) {
 	setbuf(stdout, NULL);

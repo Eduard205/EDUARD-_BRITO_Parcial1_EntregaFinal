@@ -6,7 +6,7 @@
  */
 #ifndef ECONTRIBUYENTE_H_
 #define ECONTRIBUYENTE_H_
-#include "eRecaudacion.h"
+//#include "eRecaudacion.h"
 
 typedef struct {
 	int idContribuyente;

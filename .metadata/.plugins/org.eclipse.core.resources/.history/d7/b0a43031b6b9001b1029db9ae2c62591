@@ -8,7 +8,7 @@
 #ifndef ERECAUDACION_H_
 #define ERECAUDACION_H_
 #define TEXT_SIZE 20
-//#include "eContribuyente.h"
+#include "eContribuyente.h"
 
 typedef struct {
 	int idTipo;
@@ -46,7 +46,7 @@ int buscarPorIdRecaudacion(eRecaudacion array[], int tam, int id);
 int mostrarPorIdRecaudacion(eRecaudacion array[], int tam);
 void cambiarEstadoRefinanciar(eRecaudacion array[], int tam, int idRecaudacion);
 void cambiarEstadoSaldar(eRecaudacion array[], int tam, int idRecaudacion);
-//void listarUnaRecaudacion2(eRecaudacion array, eContribuyente array2);
-//int mostrarRecaudacionesSaldadas(eRecaudacion array[], int tam);
+void listarUnaRecaudacion2(eRecaudacion array, eContribuyente array2);
+int mostrarRecaudacionesSaldadas(eRecaudacion array[], int tam);
 
 #endif /* ERECAUDACION_H_ */

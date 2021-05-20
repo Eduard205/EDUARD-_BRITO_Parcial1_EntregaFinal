@@ -263,7 +263,7 @@ int altaRecaudacion(eRecaudacion array[], int posicion2, int *contadorId2) {
 
 	return 0;
 }
-/*
+
 void listarUnaRecaudacion2(eRecaudacion array, eContribuyente array2) {
 
 	printf("%10d%10d%15d%13s%12.2f%13s%13s%13s\n", array.idContribuyente,
@@ -293,4 +293,3 @@ int mostrarRecaudacionesSaldadas(eRecaudacion array[], int tam) {
 	}
 	return rtn;
 }
-*/
