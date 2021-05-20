@@ -1,0 +1,7 @@
+18:37:44 **** Incremental Build of configuration Debug for project Parcial_1_Prog ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial_1_Prog.o" "..\\src\\Parcial_1_Prog.c" 
+In file included from ..\src\Parcial_1_Prog.c:13:
+..\src\eRecaudacion.h:49:48: error: unknown type name 'eContribuyente'
+   49 | void listarUnaRecaudacion2(eRecaudacion array, eContribuyente array2);
+      |                                                ^~~~~~~~~~~~~~

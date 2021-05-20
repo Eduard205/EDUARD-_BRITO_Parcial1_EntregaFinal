@@ -1,0 +1,33 @@
+/*
+ * eRecaudacion.h
+ *
+ *  Created on: 13 may. 2021
+ *      Author: eduar
+ */
+
+#ifndef ERECAUDACION_H_
+#define ERECAUDACION_H_
+#define TEXT_SIZE 20
+
+
+
+typedef struct {
+	int idRecaudacion;
+	int idContribuyente;
+	int idTipo;
+	int mes;
+	float importe;
+	int isEmpty;
+} eRecaudacion;
+
+typedef struct {
+	int idTipo;
+	char descripcion[TEXT_SIZE];
+	int isEmpty;
+} eDescripTipoRecaudacion;
+
+
+
+void eRecaudacion_Inicializar(eRecaudacion array[], int TAM);
+
+#endif /* ERECAUDACION_H_ */

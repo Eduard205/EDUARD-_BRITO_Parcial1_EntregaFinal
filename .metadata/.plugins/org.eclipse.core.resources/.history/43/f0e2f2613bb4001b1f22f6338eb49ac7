@@ -1,0 +1,15 @@
+/*
+ * eContribuyente.h
+ *
+ *  Created on: 13 may. 2021
+ *      Author: eduar
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#ifndef ECONTRIBUYENTE_H_
+#define ECONTRIBUYENTE_H_
+
+
+
+#endif /* ECONTRIBUYENTE_H_ */
