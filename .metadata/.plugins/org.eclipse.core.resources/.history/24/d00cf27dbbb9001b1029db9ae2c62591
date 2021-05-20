@@ -272,7 +272,7 @@ int buscarPorIdTipo(eRecaudacion array[], int tam, int id) {
 		for (i = 0; i < tam; i++) {
 			if (array[i].idTipo.idTipo == id && array[i].idTipo.isEmpty == 0) {
 				rtn = i;
-				//break;
+				break;
 			}
 		}
 	}
@@ -297,10 +297,8 @@ int mostrarRecaudacionPorIdTipo(eRecaudacion array[], int tam) {
 		scanf("%d", &idTipo);
 	}
 
-
 	posicion = buscarPorIdTipo(array, tam, idTipo);
 	listarUnaRecaudacionPorId(array[posicion]);
-
 
 	rtn = 1;
 	return rtn;

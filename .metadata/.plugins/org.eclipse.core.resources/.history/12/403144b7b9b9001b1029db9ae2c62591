@@ -263,51 +263,6 @@ int altaRecaudacion(eRecaudacion array[], int posicion2, int *contadorId2) {
 
 	return 0;
 }
-
-int buscarPorIdTipo(eRecaudacion array[], int tam, int id) {
-	int rtn = -1;
-	int i;
-
-	if (array != NULL && tam > 0) {
-		for (i = 0; i < tam; i++) {
-			if (array[i].idTipo.idTipo == id && array[i].idTipo.isEmpty == 0) {
-				rtn = i;
-				//break;
-			}
-		}
-	}
-	return rtn;
-}
-
-int mostrarRecaudacionPorIdTipo(eRecaudacion array[], int tam) {
-
-	int rtn = 0;
-	int idTipo;
-	int posicion;
-
-	printf("Ingrese el id del tipo (1-ARBA, 2-IIBB, 3-GANANCIAS): ");
-	scanf("%d", &idTipo);
-	while (idTipo < 1 || idTipo > 3) {
-		printf("Error. Ingrese un Id de tipo entre (1-3): ");
-		scanf("%d", &idTipo);
-	}
-
-	while (buscarPorIdTipo(array, tam, idTipo) == -1) {
-		printf("No existe el id ingresado, reingrese id de tipo: ");
-		scanf("%d", &idTipo);
-	}
-
-
-	posicion = buscarPorIdTipo(array, tam, idTipo);
-	listarUnaRecaudacionPorId(array[posicion]);
-
-
-	rtn = 1;
-	return rtn;
-}
-
-
-
 /*
 void listarUnaRecaudacion2(eRecaudacion array, eContribuyente array2) {
 

@@ -195,7 +195,26 @@ int main(void) {
 
 		}
 	} while (resp == 's');
+	/*
+	 for (int i = 0; i < TAM_ARRAY; i++) {
+	 printf("\nId Contribuyente: %d\n", contribuyente[i].idContribuyente);
+	 printf("Nombre: %s\n", contribuyente[i].nombre);
+	 printf("Apellido: %s\n", contribuyente[i].apellido);
+	 printf("CUIL: %d\n", contribuyente[i].cuil);
+	 printf("isEmpty: %d\n", contribuyente[i].isEmpty);
 
+	 }
+
+	 for (int i = 0; i < TAM_ARRAY; i++) {
+	 printf("\nId Recaudacion: %d\n", recaudacion[i].idRecaudacion);
+	 printf("Id Contribuyente: %d\n", recaudacion[i].idContribuyente);
+	 printf("Id Tipo: %d%s%d\n", ArrayDescripcionTipo[i].idTipo, ArrayDescripcionTipo[i].descripcion,ArrayDescripcionTipo[i].isEmpty);
+	 printf("Mes: %d\n", recaudacion[i].mes);
+	 printf("Importe: %.2f\n", recaudacion[i].importe);
+	 printf("isEmpty: %d\n", recaudacion[i].isEmpty);
+
+	 }
+	 */
 
 	return EXIT_SUCCESS;
 }

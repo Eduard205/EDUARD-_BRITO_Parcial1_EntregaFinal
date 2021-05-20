@@ -43,11 +43,10 @@ int main(void) {
 				"\n6-Saldar Recaudacion"
 				"\n7-Imprimir Contribuyente"
 				"\n8-Imprimir Recaudacion"
-				"\n9-Informes"
-				"\n10-Salir\n");
+				"\n9-Salir\n");
 		scanf("%d", &opcion);
 
-		while (opcion < 1 || opcion > 10) {
+		while (opcion < 1 || opcion > 9) {
 			printf(
 					"Ingreso una opción invalida, las opciones disponibles son (1, 2, 3, 4, 5, 6, 7, 8, 9): ");
 			scanf("%d", &opcion);
@@ -118,7 +117,13 @@ int main(void) {
 						"No ha dado de alta contribuyentes, ingrese a la opción 1");
 			}
 
+		/*	for (int i = 0; i < TAM_ARRAY; i++) {
+				printf("%d\n", listaRecaudaciones[i].idTipo.isEmpty);
+				printf("%d\n", listaRecaudaciones[i].isEmpty);
+				printf("%s\n", listaRecaudaciones[i].idTipo.descripcion);
 
+			}
+		 */
 			break;
 
 		case 5:
@@ -134,7 +139,13 @@ int main(void) {
 								}
 								cambiarEstadoRefinanciar(listaRecaudaciones, TAM_ARRAY, idRecaudacion);
 								printf("La recaudacion fue refinanciada");
-
+				/*
+								for (int i = 0; i < TAM_ARRAY; i++) {
+								printf("Descripcion: %s\n", listaRecaudaciones[i].idEstado.descripcion);
+								printf("idEstado: %d\n", listaRecaudaciones[i].idEstado.idEstado);
+								printf("IsEmpty: %d\n", listaRecaudaciones[i].idEstado.isEmpty);
+								}
+				*/
 			}
 			else {
 					printf("No ha dado de alta recaudaciones, ingrese a la opción 4");
@@ -179,23 +190,32 @@ int main(void) {
 					break;
 
 		case 9:
-							if (flagOpcion4 == 1) {
-								mostrarRecaudacionPorIdTipo(listaRecaudaciones, TAM_ARRAY);
-							} else {
-								printf(
-										"No ha dado de alta recaudaciones, ingrese a la opción 4");
-							}
-
-							break;
-
-		case 10:
 			printf("A salido del programa");
 			resp = !'s';
 			break;
 
 		}
 	} while (resp == 's');
+	/*
+	 for (int i = 0; i < TAM_ARRAY; i++) {
+	 printf("\nId Contribuyente: %d\n", contribuyente[i].idContribuyente);
+	 printf("Nombre: %s\n", contribuyente[i].nombre);
+	 printf("Apellido: %s\n", contribuyente[i].apellido);
+	 printf("CUIL: %d\n", contribuyente[i].cuil);
+	 printf("isEmpty: %d\n", contribuyente[i].isEmpty);
 
+	 }
+
+	 for (int i = 0; i < TAM_ARRAY; i++) {
+	 printf("\nId Recaudacion: %d\n", recaudacion[i].idRecaudacion);
+	 printf("Id Contribuyente: %d\n", recaudacion[i].idContribuyente);
+	 printf("Id Tipo: %d%s%d\n", ArrayDescripcionTipo[i].idTipo, ArrayDescripcionTipo[i].descripcion,ArrayDescripcionTipo[i].isEmpty);
+	 printf("Mes: %d\n", recaudacion[i].mes);
+	 printf("Importe: %.2f\n", recaudacion[i].importe);
+	 printf("isEmpty: %d\n", recaudacion[i].isEmpty);
+
+	 }
+	 */
 
 	return EXIT_SUCCESS;
 }

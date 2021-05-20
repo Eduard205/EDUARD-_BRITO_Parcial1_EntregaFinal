@@ -297,10 +297,8 @@ int mostrarRecaudacionPorIdTipo(eRecaudacion array[], int tam) {
 		scanf("%d", &idTipo);
 	}
 
-
 	posicion = buscarPorIdTipo(array, tam, idTipo);
 	listarUnaRecaudacionPorId(array[posicion]);
-
 
 	rtn = 1;
 	return rtn;

@@ -283,7 +283,7 @@ int mostrarRecaudacionPorIdTipo(eRecaudacion array[], int tam) {
 
 	int rtn = 0;
 	int idTipo;
-	int posicion;
+	int posicion[50];
 
 	printf("Ingrese el id del tipo (1-ARBA, 2-IIBB, 3-GANANCIAS): ");
 	scanf("%d", &idTipo);
